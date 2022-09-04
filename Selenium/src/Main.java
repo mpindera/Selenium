@@ -25,7 +25,7 @@ public class Main {
         /*
         saving to variable (urlAddress) url address.
         Searched by: tag of node //img and attribute @alt.
-        Got by attribute "src"
+        Got by attribute "src".
         */
         urlAddress = driver.findElement(By.xpath("//img[@alt='Selenium logo.svg']")).getAttribute("src");
 
@@ -42,12 +42,12 @@ public class Main {
         webElementsList = driver.findElements(By.xpath("//p[preceding-sibling::h2[./span[@id='History']]" +
                 " and following-sibling::h2[./span[@id='Components']]]"));
 
-        //for all element in list (webElementsList) add to StringBuilder
+        //for all element in list (webElementsList) add to StringBuilder.
         for (WebElement element : webElementsList) {
             contentOfTitle.append(element.getText()).append("\n");
         }
 
-        //Add all parameters and values to HashMap (mapOfBox)
+        //Add all parameters and values to HashMap (mapOfBox).
         List<WebElement> parametersLists = driver.findElements(By.xpath("//th[@scope='row']"));
         for (int i = 0; i < parametersLists.size() - 1; i++) {
             List<WebElement> parametersList = driver.findElements(By.xpath("//th[@class='infobox-label']"));
